@@ -1,0 +1,30 @@
+﻿create table usuario (
+idusuario varchar(30) not null,
+contra varchar(30),
+primary key(idusuario)
+);
+
+
+
+insert into usuario values(
+'usuario1',
+'usuario2020');
+
+
+create table carretera (
+carreteranombre varchar(30) not null,
+categoria varchar(30),
+KM varchar(30),
+primary key(carreteranombre)
+);
+
+create table tramo (
+tramonombre varchar(30) not null,
+carreteranombre varchar(30) not null,
+comuna varchar(30),
+inicio varchar(30),
+fin varchar(30),
+
+primary key(tramonombre),
+foreign key (carreteranombre) references carretera(carreteranombre)
+);
